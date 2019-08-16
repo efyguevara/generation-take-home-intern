@@ -4,14 +4,25 @@
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 /* Establecer el tamaño del elemento div que contiene el mapa */
-#map {
-  height: 400 px; /* La altura es de 400 píxeles */
+#divMap {
+  padding: 0;
+  height: 700px; /* La altura es de 400 píxeles */
+  width: 500px; /* El ancho es el ancho de la página web */
+}
+
+#root {
+  height: 100%; /* La altura es de 400 píxeles */
   width: 100%; /* El ancho es el ancho de la página web */
 }
 
+#divYourComponent {
+    height: 100%; /* La altura es de 400 píxeles */
+    width: 100%; /* El ancho es el ancho de la página web */
+}
 

@@ -1,70 +1,49 @@
 import React, { Component } from 'react';
-import Maps from './Maps'
-
-/*
-* Use this component as a launching-pad to build your functionality.
-*
-*/
-
-
-class YourComponent extends Component {
-  render() {
-    return (
-      <div style={divStyle}>
-        <Maps/>
-      </div>
-    );
-  }
-}
-
-var divStyle = {
-  border: 'red',
+import { Container, Row, Col } from 'react-bootstrap';
+import Maps from './Maps';
+let divStyle = {
+  border: 'black',
   borderWidth: 2,
   borderStyle: 'solid',
   padding: 20
 };
 
 
+function YourComponent(props) {
+  
+    return (
+      <div id="divYourComponent" style={divStyle}>
+          <Container>
+            <h2>Bienvenido a Store Maps</h2>
+            <Row>
+            
+              <Col xs={12} md={12} lg={6} xl={6}>
+                 <Maps />
+              </Col>
+              <Col xs={12} md={12} lg={6} xl={6}>
+                <div style={divStyle}>
+                  aki iran los marcadores
+                </div>
+                <div style={divStyle}>
+                  aki iran los marcadores
+                </div>
+                <div style={divStyle}>
+                  aki iran los marcadores
+                </div>
+                <div style={divStyle}>
+                  aki iran los marcadores
+                </div>
+                <div style={divStyle}>
+                  aki iran los marcadores
+                </div>
+              </Col>
+            </Row>
+          </Container>
+      </div>
+    );
+  
+}
+
 export default YourComponent;
 
 
-// class YourComponent extends Component {
-
-
-//   render() {
-    
-
-//   let divStyle = {
-//   border: 'red',
-//   borderWidth: 2,
-//   borderStyle: 'solid',
-//   padding: 20
-// };
-//     return (
-
-//       <div classstyle={divStyle}>
-//         <h1> Put your solution here!</h1>
-
-//         <h2>
-//           Hola
-//         </h2>
-//       </div>
-//     );
-
-//   }
-// }
-
-// export default YourComponent;
-
-
-
-//API KEY GOOGLE MAPS: AIzaSyBZrbYMVmEVDK-CgM2vh0D18mN9sW_70kM
-
-
-// Uninstall this, and make sure you have create a project in firebase console
-// Run
-// sudo npm install -g firebase-cli
-// &&
-// sudo npm install -g firebase-tools 
-// Fixing deploy
-// Run firebase init

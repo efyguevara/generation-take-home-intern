@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 import YourComponent from "./YourComponent";
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <div className="App">
         <h1>Hi, Welcome to the Digital Generation Code Challenge!</h1>
@@ -39,9 +40,9 @@ class App extends Component {
         </ul>
 
         <YourComponent />
+
       </div>
     );
-  }
 }
 
 export default App;
