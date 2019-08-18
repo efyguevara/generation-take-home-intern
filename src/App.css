@@ -1,5 +1,5 @@
 .App {
-  margin: 15px;
+  margin: 10px;
 }
 
 html, body {
@@ -12,8 +12,9 @@ html, body {
 /* Establecer el tamaño del elemento div que contiene el mapa */
 #divMap {
   padding: 0;
-  height: 700px; /* La altura es de 400 píxeles */
-  width: 500px; /* El ancho es el ancho de la página web */
+  margin: 0;  
+  height: 600px; /* La altura es de 400 píxeles */
+  width: 570px; /* El ancho es el ancho de la página web */
 }
 
 #root {
