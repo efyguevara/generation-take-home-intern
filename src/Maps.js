@@ -10,22 +10,27 @@ class Maps extends Component {
     }
 
     componentDidMount() {
+        const infoCity = {
+            cityCoordinates: {
+                north: 25.49,
+                south: 13.08,
+                west: -105.39,
+                east: -92.86,
+            },
+            cityLatLng: {
+                latLng: new google.maps.LatLng( 19.414678, -99.134715 ), 
+            }, 
+            population: 
+                105837
+            };
 
-        const mexicoCity = {
-            north: 25.49,
-            south: 13.08,
-            west: -105.39,
-            east: -92.86,
-        };
-
-        let city = { lat: 19.414678, lng: -99.134715 };
         let mapOptions = {
-            zoom: 12,
-            center: city,
+            zoom: 11,
+            center: infoCity.cityLatLng.latLng,
             restriction: {
-                latLngBounds: mexicoCity,
+                latLngBounds: infoCity.cityCoordinates,
                 strictBounds: false,
-            }
+            }   
         };
 
 
@@ -33,6 +38,18 @@ class Maps extends Component {
         google.maps.event.addListener(map, 'bounds_changed', function () {
             console.log(map.getBounds());
         });
+
+        let cityCircle = new google.maps.Circle({
+
+            strokeColor: '#5eac6f',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#5eac6f',
+            fillOpacity: 0.25,
+            map: map,
+            center: infoCity.cityLatLng.latLng,
+            radius: Math.sqrt(infoCity.population) * 100
+          });
 
         let transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
