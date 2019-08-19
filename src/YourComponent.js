@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Navs from './Navs'
 import Maps from './Maps';
 let divStyle = {
   border: 'black',
@@ -13,18 +14,17 @@ function YourComponent(props) {
 
   return (
     <div id="divYourComponent" style={divStyle}>
-      <Container>
-        <h2>Bienvenido a Store Maps</h2>
+      <Container-fluid>
+        <Navs />
         <Row>
-
-          <Col xs={12} md={12} lg={6} xl={6} className="p-0">
-            <Maps />
+          <Col xs={12} md={12} lg={8} xl={8} className="showMap">
+            <Maps/>
           </Col>
-          <Col xs={12} md={12} lg={6} xl={6} className="p-0">
+          <Col xs={12} md={12} lg={4} xl={4}  className="showMap">
 
           </Col>
         </Row>
-      </Container>
+      </Container-fluid>
     </div>
   );
 

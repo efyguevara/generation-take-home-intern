@@ -13,8 +13,8 @@ html, body {
 #divMap {
   padding: 0;
   margin: 0;  
-  height: 600px; /* La altura es de 400 píxeles */
-  width: 570px; /* El ancho es el ancho de la página web */
+  height: 700px; /* La altura es de 400 píxeles */
+  width: 100%; /* El ancho es el ancho de la página web */
 }
 
 #root {
@@ -25,5 +25,10 @@ html, body {
 #divYourComponent {
     height: 100%; /* La altura es de 400 píxeles */
     width: 100%; /* El ancho es el ancho de la página web */
+    padding: 1em; 
 }
 
+.showMap {
+  justify-content: center;
+  display: flex; 
+}
