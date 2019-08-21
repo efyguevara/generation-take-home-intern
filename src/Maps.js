@@ -10,6 +10,8 @@ class Maps extends Component {
     }
 
     componentDidMount() {
+
+
         const infoCity = {
             cityCoordinates: {
                 north: 25.49,
@@ -18,11 +20,11 @@ class Maps extends Component {
                 east: -92.86,
             },
             cityLatLng: {
-                latLng: new google.maps.LatLng( 19.414678, -99.134715 ), 
-            }, 
-            population: 
+                latLng: new google.maps.LatLng(19.414678, -99.134715),
+            },
+            population:
                 105837
-            };
+        };
 
         let mapOptions = {
             zoom: 11,
@@ -30,13 +32,13 @@ class Maps extends Component {
             restriction: {
                 latLngBounds: infoCity.cityCoordinates,
                 strictBounds: false,
-            }   
+            }
         };
 
 
         let map = new google.maps.Map(this.mapsRef.current, mapOptions);
         google.maps.event.addListener(map, 'bounds_changed', function () {
-            console.log(map.getBounds());
+            // console.log(map.getBounds());
         });
 
         let cityCircle = new google.maps.Circle({
@@ -49,7 +51,7 @@ class Maps extends Component {
             map: map,
             center: infoCity.cityLatLng.latLng,
             radius: Math.sqrt(infoCity.population) * 100
-          });
+        });
 
         let transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
@@ -57,7 +59,7 @@ class Maps extends Component {
         for (let i = 0; i < stores.length; i++) {
             let infoWindowMarker = `
             <p> <b> Name:</b> ${stores[i].Name} </p> 
-            <p> <b> Address: </b> ${stores[i].Address} </p>`;
+            <p> <b> Address:</b> ${stores[i].Address} </p>`;
 
             let infowindow = new google.maps.InfoWindow({
                 content: infoWindowMarker,
@@ -73,7 +75,6 @@ class Maps extends Component {
             marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
-
         };
     }
 
