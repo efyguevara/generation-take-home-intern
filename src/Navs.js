@@ -3,7 +3,6 @@ import { Navbar } from 'react-bootstrap';
 import './App.css';
 
 class Navs extends Component {
-
     render() {
         return (
             <Navbar className="Navbar navbar-dark bg-dark">
@@ -11,7 +10,7 @@ class Navs extends Component {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        <a href="#login" className="äctive" >Favorites</a>
+                        {/* <a href="#login" className="äctive" >Favorites</a> */}
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>

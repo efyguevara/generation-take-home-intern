@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import stores from './store_directory.json';
 const google = window.google;
 
-
 class Maps extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +9,6 @@ class Maps extends Component {
     }
 
     componentDidMount() {
-
         const mexicoCity = {
             north: 25.49,
             south: 13.08,
@@ -28,10 +26,8 @@ class Maps extends Component {
             }
         };
 
-
         let map = new google.maps.Map(this.mapsRef.current, mapOptions);
         google.maps.event.addListener(map, 'bounds_changed', function () {
-            console.log(map.getBounds());
         });
 
         let transitLayer = new google.maps.TransitLayer();
@@ -61,7 +57,6 @@ class Maps extends Component {
 
     render() {
         return (
-
             <div id="divMap" ref={this.mapsRef}></div>
         )
     }
