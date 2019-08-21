@@ -56,16 +56,13 @@ class Maps extends Component {
             marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
-
         };
     }
 
     render() {
         return (
 
-            <div id="divMap" ref={this.mapsRef} >
-
-            </div>
+            <div id="divMap" ref={this.mapsRef}></div>
         )
     }
 }

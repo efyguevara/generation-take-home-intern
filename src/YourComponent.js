@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Navs from './Navs'
 import Maps from './Maps';
+import Favorites from './Favorites';
 let divStyle = {
   border: 'black',
   borderWidth: 2,
@@ -21,7 +22,7 @@ function YourComponent(props) {
             <Maps/>
           </Col>
           <Col xs={12} md={12} lg={4} xl={4}  className="showMap">
-
+            <Favorites/>
           </Col>
         </Row>
       </Container-fluid>
